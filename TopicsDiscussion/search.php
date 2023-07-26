@@ -48,10 +48,9 @@
             const searchInput = document.getElementById('searchInput').value.trim(); // Get the search query
 
             if (searchInput === '') {
-                // Clear the search results container
                 const resultsContainer = document.getElementById('searchResults');
                 resultsContainer.innerHTML = '';
-                return; // Exit the function
+                return;
             }
 
             // Make an AJAX request to the server
@@ -59,7 +58,6 @@
             xhr.open('GET', `searchAction.php?query=${searchInput}`, true);
             xhr.onload = function () {
                 if (xhr.status === 200) {
-                    // Display the search results
                     const resultsContainer = document.getElementById('searchResults');
                     resultsContainer.innerHTML = xhr.responseText;
                 }
@@ -67,10 +65,7 @@
             xhr.send();
         }
 
-        // Attach the function to the form's submit event
         document.getElementById('searchInput').addEventListener('input', handleSearch);
-
-        // Perform an initial search when the page loads
         window.addEventListener('load', handleSearch);
 
     </script>
