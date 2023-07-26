@@ -16,7 +16,7 @@ include '../Database/topicData.php';
 
 <body>
 
-    <form action="editTopicAction.php?id=<?php echo $row['id']; ?>" method="POST" enctype='multipart/form-data'>
+    <form action="editTopicAction.php?id=<?php $row['id'] ?>" method="POST" enctype='multipart/form-data'>
         <div class="bg-secondary container-fluid col-11 p-1 m-5 rounded">
             <div class="m-5 col-9">
                 <input type="text" class="form-control" name="topicName" value="<?php echo $row['topicName'] ?>"
@@ -44,7 +44,6 @@ include '../Database/topicData.php';
             <div class="m-5 col-9">
                 <textarea class="form-control" name="topicDescription" placeholder="Topic Description"
                     rows="5"><?php echo $row['topicDescription']; ?></textarea>
-
             </div>
 
             <div class="col-3 input m-5">

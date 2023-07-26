@@ -8,7 +8,7 @@ $topic_category = $_POST['topicCategory'];
 $topic_desc = $_POST['topicDescription'];
 $topic_image = $_FILES['topicImage'];
 date_default_timezone_set('Asia/Dhaka');
-$topic_postTime = date("H:i:s");
+$topic_postTime = date("d-F-Y h:i:s A");
 $topicAuthor = $_SESSION['userName'];
 // echo $topic_postTime;
 // echo $topicAuthor;
