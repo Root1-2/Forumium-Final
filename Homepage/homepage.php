@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['userName'])) {
+    echo "<script>alert('Not Accessible!')</script>";
+    echo "<script>location.href='login.php'</script>";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
 

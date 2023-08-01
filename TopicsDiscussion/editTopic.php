@@ -1,4 +1,10 @@
 <?php
+session_start();
+
+if (!isset($_SESSION['userName'])) {
+    echo "<script>alert('Not Accessible!')</script>";
+    echo "<script>location.href='login.php'</script>";
+}
 include '../Database/topicData.php';
 ?>
 

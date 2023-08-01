@@ -30,7 +30,7 @@
         <h2 class=" py-3 text-center" style="background-color: #006064;">Sign In</h2>
         <form class="p-3" action="loginAction.php" method="post">
             <div class="mb-5 col-10">
-                <p>Username</p>
+                <p>Username or Email</p>
                 <input type="text" class="form-control" name="l_userName" Required>
             </div>
             <div class="mb-4 col-10">
@@ -38,12 +38,12 @@
                 <input type="password" class="form-control" name="l_password" Required>
             </div>
             <div class="d-flex justify-content-between">
-                <div class="mb-5 form-check">
+                <!-- <div class="mb-5 form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
                     <span>Remember Me</span>
-                </div>
+                </div> -->
                 <div>
-                    <span><a class="span-forgot" href="forgotp.php" style="text-decoration: none; color: white">Forgot
+                    <span><a class="span-forgot" href="forgotp.php" style="color: white">Forgot
                             Password?</a></span>
                 </div>
             </div>

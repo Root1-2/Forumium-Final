@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-include '../Database/config.php';
 include '../Database/topicData.php';
 
 $topicID = $_GET['id'];

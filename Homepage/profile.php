@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['userName'])) {
+    echo "<script>alert('Not Accessible!')</script>";
+    echo "<script>location.href='login.php'</script>";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
 
@@ -28,16 +37,9 @@
 
 
 <body>
-    <?php
-    session_start();
-
-    if (isset($_SESSION['userName'])) {
-        include 'header.php';
-        include '../Database/userData.php';
-    } else {
-        echo "<script>alert('You Have to Login First')</script>";
-        echo "<script>location.href='../Authentication/logIn.php'</script>";
-    }
+    <?php 
+    include 'header.php';
+    include '../Database/userData.php';
     ?>
 
     <!-- Profile Section -->

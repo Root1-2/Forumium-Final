@@ -113,7 +113,7 @@
                     </div>
                 </div>
 
-                <button type="submit" class="btn btn-success d-grid mt-5 mx-auto">Register</button>
+                <button type="submit" name="signup" class="btn btn-success d-grid mt-5 mx-auto">Register</button>
                 <span>Already Have An Account?</span>
                 <span><a href="login.php">Sign In</a></span>
             </form>

@@ -4,7 +4,7 @@ include 'config.php';
 
 // Post Data Info
 $topicID = $_GET['id'];
-$post = "SELECT * FROM `topicpost` WHERE id = $topicID";
+$post = "SELECT * FROM `topicpost` WHERE id = '$topicID'";
 $result = mysqli_query($conn, $post);
 $row = mysqli_fetch_assoc($result);
 

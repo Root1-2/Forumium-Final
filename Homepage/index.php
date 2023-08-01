@@ -2,7 +2,7 @@
 session_start();
 
 if(isset($_SESSION['userName'])) {
-    include 'homepage.php';
+    echo "<script>location.href='homepage.php'</script>";
 }
 
 else {

@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['userName'])) {
+    echo "<script>alert('Not Accessible!')</script>";
+    echo "<script>location.href='login.php'</script>";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
 
@@ -22,17 +31,8 @@
 </head>
 
 <body>
-    <?php
-    session_start();
-
-    if (isset($_SESSION['userName'])) {
-        include '../Homepage/header.php';
-    } else {
-        echo "<script>alert('You Have to Login First')</script>";
-        echo "<script>location.href='../Authentication/logIn.php'</script>";
-    }
-
-    ?>
+    <?php include '../Homepage/header.php'; ?>
+    
     <form id="searchForm">
         <div class="input m-3">
             <input type="text" class="form-control" placeholder="Search Topics" id="searchInput">
@@ -48,9 +48,10 @@
             const searchInput = document.getElementById('searchInput').value.trim(); // Get the search query
 
             if (searchInput === '') {
+                // Clear the search results container
                 const resultsContainer = document.getElementById('searchResults');
                 resultsContainer.innerHTML = '';
-                return;
+                return; // Exit the function
             }
 
             // Make an AJAX request to the server
@@ -58,6 +59,7 @@
             xhr.open('GET', `searchAction.php?query=${searchInput}`, true);
             xhr.onload = function () {
                 if (xhr.status === 200) {
+                    // Display the search results
                     const resultsContainer = document.getElementById('searchResults');
                     resultsContainer.innerHTML = xhr.responseText;
                 }
@@ -65,7 +67,10 @@
             xhr.send();
         }
 
+        // Attach the function to the form's submit event
         document.getElementById('searchInput').addEventListener('input', handleSearch);
+
+        // Perform an initial search when the page loads
         window.addEventListener('load', handleSearch);
 
     </script>

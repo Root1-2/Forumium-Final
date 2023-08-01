@@ -13,20 +13,20 @@
                         Forum Topics
                     </a>
                     <ul class="dropdown-menu gap-3 p-2">
-                        <li><a class="dropdown-item rounded-2" href="#">Gaming</a></li>
-                        <li><a class="dropdown-item rounded-2" href="#">Movies</a></li>
-                        <li><a class="dropdown-item rounded-2" href="#">Songs</a></li>
-                        <li><a class="dropdown-item rounded-2" href="#">Daily Life</a></li>
-                        <li><a class="dropdown-item rounded-2" href="#">Memes</a></li>
-                        <li><a class="dropdown-item rounded-2" href="#">Discussion</a></li>
-                        <li><a class="dropdown-item rounded-2" href="#">Sports</a></li>
-                        <li><a class="dropdown-item rounded-2" href="#">Buy-Sell</a></li>
+                        <li><a class="dropdown-item rounded-2 disabled" href="#">Gaming</a></li>
+                        <li><a class="dropdown-item rounded-2 disabled" href="#">Movies</a></li>
+                        <li><a class="dropdown-item rounded-2 disabled" href="#">Songs</a></li>
+                        <li><a class="dropdown-item rounded-2 disabled" href="#">Daily Life</a></li>
+                        <li><a class="dropdown-item rounded-2 disabled" href="#">Memes</a></li>
+                        <li><a class="dropdown-item rounded-2 disabled" href="#">Discussion</a></li>
+                        <li><a class="dropdown-item rounded-2 disabled" href="#">Sports</a></li>
+                        <li><a class="dropdown-item rounded-2 disabled" href="#">Buy-Sell</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
                         <li><a class="dropdown-item rounded-2" href="../TopicsDiscussion/search.php">Search Topics</a>
                         </li>
-                        <li><a class="dropdown-item rounded-2" href="#">All Topics</a></li>
+                        <li><a class="dropdown-item rounded-2" href="../Homepage/homepage.php">All Topics</a></li>
                     </ul>
                 </li>
                 <li class="nav-item"><a href="../TopicsDiscussion/createTopic.php" class="nav-link">Create Topic</a>

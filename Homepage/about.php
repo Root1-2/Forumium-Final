@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['userName'])) {
+    echo "<script>alert('Not Accessible!')</script>";
+    echo "<script>location.href='login.php'</script>";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
 
@@ -27,30 +36,15 @@
 </head>
 
 <body>
-    <?php
-    session_start();
-
-    if (isset($_SESSION['userName'])) {
-        include 'header.php';
-    } else {
-        echo "<script>alert('You Have to Login First')</script>";
-        echo "<script>location.href='../Authentication/logIn.php'</script>";
-    }
-    ?>
+    <?php include 'header.php'; ?>
 
     <!-- Heroes Section -->
-    <div class="container col-xxl-8 px-4 py-5">
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-            <div class="col-10 col-sm-8 col-lg-6">
-                <img src="bootstrap-themes.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700"
-                    height="500" loading="lazy">
-            </div>
-            <div class="col-lg-6">
-                <h1 class="title fw-bold text-body-emphasis lh-1 mb-3">Forumium</h1>
-                <p class="lead">Forumium is an online forum website designed to bring people together and provide a
-                    platform for sharing knowledge, opinions, and experiences. With a wide range of topics, including
-                    gaming, movies, songs, daily life, memes, sports, there's something for everyone.</p>
-            </div>
+    <div class="px-4 py-5 my-5 text-center">
+        <h1 class="title fw-bold text-body-emphasis lh-1 mb-3">Forumium</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead">Forumium is an online forum website designed to bring people together and provide a
+                platform for sharing knowledge, opinions, and experiences. With a wide range of topics, including
+                gaming, movies, songs, daily life, memes, sports, there's something for everyone.</p>
         </div>
     </div>
 
